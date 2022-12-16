@@ -1,0 +1,468 @@
+
+$uvuPrimary: #275d38;
+$uvuSecondary: #1A4127;
+$headerBackground: #F2F2F2;
+$mainBackground: #E8E8E8;
+$cardBackground: #F9F9F9;
+$mainShadow:  0 5px 4px 0 rgba(0, 0, 0, 0.372);
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    min-width: 340px;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: $headerBackground;
+    font-family: Rajdhani;
+
+.topSection {
+    display: grid;
+    grid-template-columns: 56px 97px 1fr;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    .slideNav {
+        padding: 15px;
+       img {
+        vertical-align: middle;
+        width: 26px;
+       }
+    }//end of slide nav
+    .uvuTitle {
+        padding: 15px;
+    }
+    .deptTitle {
+        text-decoration: none;
+        font-size: 20px;
+        padding: 15px;
+        color: $uvuPrimary;
+        font-family: Rajdhani;
+        font-weight: 600;
+        line-height: 1.1em;
+    }
+    #hamburgerBtn {
+        background: none;
+        border: none;
+    }
+}//end of header
+
+.bottomSection {
+    display: flex;
+    height: 100%;
+    min-width: 320px;
+    border-block-start: 5px solid #F4F4F4;
+    background-color: white;
+    //padding: 1.5rem;
+    text-align: center;
+    ul {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #myUvu {
+        width: 1.5rem;
+        vertical-align: middle;
+    }
+    li {
+        margin: 1rem 1%;
+        padding: 0;
+        width: auto;
+    }
+    a {
+        text-decoration: none;
+        color: $uvuPrimary;
+        background-color: $headerBackground;
+        border-radius: 25px;
+        padding: .5rem .75rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    li:first-child a {
+        background-color: $uvuPrimary;
+        color: white;
+    }
+    a:hover {
+        background-color: $uvuSecondary;
+        color:white;
+    }
+    li:first-child a:hover {
+        background-color: $uvuSecondary;
+        color:white;
+    }
+    .searchButton {
+        display: none;
+    }
+
+    .searchButton a {
+        background-color: rgba(0,0,0, 0);
+    }
+    .searchButton li:hover {
+        background-color: rgba(0,0,0, 0)!important;
+    }
+
+}
+}//ENd OF BOTTOM
+
+
+nav {
+    background-color: $headerBackground;
+    overflow: auto;
+    white-space: nowrap;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        overflow-y: hidden;
+        height: 100%;
+        li {
+            display: inline-block;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            height: 100%;
+            padding: 1.5rem 1rem;
+        }
+        a {
+            color: black;
+            font-family: Rajdhani;
+            font-weight: 500;
+            text-decoration: none;
+            height: 2rem;
+            padding: 1.5rem 0;
+        }
+        li:hover {
+            background-color: #d4d4d4;
+        }
+        i {
+            color: $uvuPrimary;
+        }
+        .active {
+            background-color: #d4d4d4;
+        }
+    }//end ul
+}//end of nav
+
+main{
+    //padding: 1.5rem 0 0 0;
+    div.hero {
+        max-width: 100%;
+        margin: 0;
+        //height: auto;
+        position: relative;
+        picture {
+            max-width: 100%;
+            margin: 0;
+            width: 100%;
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+        h2 {
+            font-family: Rajdhani;
+            font-weight: 500;
+            font-size: 2.5rem;
+            position: absolute;
+            //transform: translateY(-18rem);
+            top: 0;
+            color: white;
+            padding-left: 1rem;
+        }
+    }//HERO IMAGE
+
+    .cardDeck {
+        display: grid;
+        grid-template-columns: 1fr;
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            box-shadow: $mainShadow;
+            margin: 1rem;
+            height: auto;
+            background-color: $cardBackground;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .cardImage {
+                contain: content;
+                width: 100%;
+                height: auto;
+            }
+            .extraDeets {
+                display: none;
+            }
+            div {
+                width: 100%;
+                height: auto;
+                padding: 0;
+                position:relative;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }//end of image
+                h2 {
+                    font-family: Rajdhani;
+                    font-weight: 500;
+                    padding: 1rem;
+                    margin: 0;
+                }//end of h2
+                p {
+                    padding: 0 1rem;
+                    margin: 0;
+                }
+
+                .learnMore {
+                    padding: 1rem;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 3rem 0 0 0;
+                    a {
+                        color: $uvuPrimary;
+                    }// end of a
+                }
+            }//END of div
+        }//end of card
+    }//end of Card Deck
+
+    .infoBoxDeck {
+        margin: auto;
+        //position: relative;
+        .infoBoxWide {
+            background-color: $cardBackground;
+            margin: 1rem;
+            box-shadow: $mainShadow;
+            h2 {
+                font-family: Rajdhani;
+                font-weight: 400;
+                background-color: $uvuPrimary;
+                color: white;
+                padding: 1rem;
+            }//end h2
+            p {
+                padding: 0 1rem;
+            }
+            .learnMoreRight {
+                text-align: right;
+                padding: 0 2rem 2rem 1rem;
+                a {
+                    color: $uvuPrimary;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }//end learnMoreRight
+        }//end of Info Box Wide
+        .halfCut {
+            column-count: 1;
+            padding: 0 1rem;
+        }
+    }//end infoBoxDeck
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+        a:hover {
+            text-decoration: underline;
+        }
+        .infoBoxWide {
+            min-height: 18rem;
+        }
+        h2 {
+            margin: 0;
+        }
+    }//end of About
+
+.contactBox {
+    margin: 1rem;
+    padding: 1rem;
+    h2 {
+        font-family: Rajdhani;
+        font-weight: 500;
+        color: $uvuPrimary;
+        border-bottom: solid 1px black;
+    }//end h2
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: .5rem 0 0 0;
+    }//end ul
+    li {
+        padding: .5rem 0;
+        margin: 0;
+    }//end li
+}
+
+.mentorInfo {
+    min-height: 8rem;
+    height: auto;
+    padding-bottom: 1rem;
+}//end mentor info
+
+.thegallery figure {
+    width: 100%;
+    height: 0;
+    position:relative;
+    padding-bottom: 150%;
+    margin: 0;
+    .lazy {
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+}
+
+.forms {
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+form fieldset {
+    margin: 2rem 0;
+    background-color: $cardBackground;
+    box-shadow: $mainShadow;
+    border: none;
+    padding: .5rem 2% 2rem 2%;
+}
+
+form legend {
+    font-family: Rajdhani;
+    font-weight: 500;
+    color: $uvuPrimary;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+    font-size: 1.5rem;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    //color: #9c2c13;
+    font-size: .8rem;
+}
+
+form label.top input, form label.top select {
+    //-webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px rgb(132, 124, 124);
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(0,0,0,0.1);
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem;
+    color: #555;
+}
+
+form input.submitBtn {
+    border: none;
+    background-color: $uvuPrimary;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+input:hover {
+    background-color: $uvuSecondary;
+}
+
+
+}//end of main
+
+.offSideNav {
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    transform: translateX(-100%);
+    width: 180px;
+    background-color: $uvuPrimary;
+    h2 {
+        font-family: Rajdhani;
+        font-weight: 500;
+        margin-left: 2rem;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    ul {
+    list-style: none;
+    }
+    li {
+        margin-bottom: 1rem;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.moveOver {
+    transform:translateX(180px);
+}
+
+#pageWrapper {
+    transition: transform 500ms ease;
+}
+
+
+footer {
+    width: 100%;
+    font-family: Rajdhani;
+    font-weight: 500;
+    .footerTop {
+        text-align: center;
+        background-color: $headerBackground;
+        padding: 1rem 1.5rem;
+        a {
+            color: $uvuPrimary;
+            text-decoration: none;
+        }
+    }//top
+    .footerBottom {
+        font-size: 2rem;
+        text-align: center;
+        background-color: $uvuPrimary;
+        color: white;
+        padding: 1rem;
+    }
+}
+

@@ -1,0 +1,115 @@
+.cardDeck, .infoBoxDeck, .forms {
+    max-width: 1170px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    font-family: Rajdhani;
+    .topSection {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        .slideNav {
+            display: none;
+        }
+
+        .deptTitle {
+            text-align: left;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            color: $uvuPrimary;
+            font-family: Rajdhani;
+            font-weight: 600;
+            line-height: 1.1em;
+        }
+    }//end of TOP
+
+}
+
+div.bottomSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 320px;
+    border-block-start: 5px solid #F4F4F4;
+    background-color: white;
+    margin:0;
+    padding: 0;
+    box-shadow: none;
+
+    ul {
+        list-style: none;
+        display: flex;
+        width: auto;
+        text-align: center;
+        justify-content: end;
+        margin: 0;
+        padding: 0;
+        margin-right: 1rem;
+        li {
+            text-align: center;
+            padding: .5rem;
+            margin: 0;
+            height: 2rem;
+        }
+    .searchButton {
+        display: inline;
+        a {
+            color: $uvuPrimary;
+            padding: .5rem .75rem;
+            margin: .25rem;
+            font-weight: 500;
+            vertical-align: middle;
+        }//end of a
+    }//end of search button
+}//end of ul
+}
+
+main {
+    div.hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            display: table-cell;
+            vertical-align: middle;
+            font-family: Rajdhani;
+            font-weight: 600;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:40%;
+            bottom:40%;
+            font-size: 4rem;
+            text-align: center;
+            margin: auto;
+            padding-left: 0;
+        }
+    }//END HERO IMAGE
+
+.cardDeck {
+    max-width: 1170px;
+    margin: auto;
+    .card{
+        .extraDeets {
+            display: block;
+        }
+    }
+}//end of card deck
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    a:hover {
+        text-decoration: underline;
+    }
+    .infoBoxWide {
+        min-height: 18rem;
+    }
+    h2 {
+        margin: 0;
+    }
+}//end of About
+}//End of Main
